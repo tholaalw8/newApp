@@ -19,4 +19,5 @@ Route::get('/ticket','PagesController@ticket');
 Route::get('/contact','TicketsController@create');
 Route::get('/createMovie','MoviesController@create');
 
-Route::post('contact','TicketsController@store');
+Route::post('/contact','TicketsController@store');
+Route::post('/createMovie','MoviesController@store');
