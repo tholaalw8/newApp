@@ -13,9 +13,6 @@ class PagesController extends Controller
         return view('home');
     }
 
-    public function movie(){
-        return view('movie');
-    }
 
 
     public function contact(){
