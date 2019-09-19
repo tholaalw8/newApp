@@ -15,7 +15,7 @@
 
 Route::get('/','PagesController@home');
 
-Route::get('/ticket','PagesController@ticket');
+Route::get('/ticket','PagesController@index');
 Route::get('/contact','TicketsController@create');
 Route::get('/createMovie','MoviesController@create');
 

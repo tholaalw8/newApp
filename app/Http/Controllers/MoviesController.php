@@ -33,9 +33,6 @@ public function store(MovieFormRequest $request){
 
     return redirect('/createMovie')->with('status',"The movei has been created!");
 
-
-
-    return $request->all();
 }
 
 }

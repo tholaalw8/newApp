@@ -17,7 +17,7 @@
             {{-- adding system menu--}}
                 <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
                 <li><a href="#">Customer</a></li>
-                <li><a href="#">User</a></li>
+                <li><a href="/ticket">Ticket</a></li>
                 <li><a href="/contact">contact</a></li>
                 <li><a href="#">Show</a></li>
                 <li><a href="#">Booking</a></li>

@@ -7,6 +7,14 @@ use App\Ticket;
 
 class TicketsController extends Controller
 {
+
+    public function index(){
+        $tickets = Ticket::all();
+        return view('ticket.index',compact('tickets'));
+
+    }
+
+
     public function create(){
         return view('tickets.create');
     }
