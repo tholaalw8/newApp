@@ -17,11 +17,23 @@
             {{-- adding system menu--}}
                 <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
                 <li><a href="#">Customer</a></li>
-                <li><a href="/ticket">Ticket</a></li>
-                <li><a href="/contact">contact</a></li>
                 <li><a href="#">Show</a></li>
                 <li><a href="#">Booking</a></li>
-                
+
+
+
+
+                {{--   Ticket operations --}}
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Ticket <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="/contact">Create</a></li>
+                        <li class="divider"></li>
+                        <li><a href="/ticket">List</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </li>
 
 {{--   movielist operations --}}
                 <li class="dropdown">
@@ -29,11 +41,17 @@
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="/createMovie">Create</a></li>
                         <li class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
+                        <li><a href="/movieList">Movie List</a></li>
                         <li class="divider"></li>
                         <li><a href="#">One more separated link</a></li>
                     </ul>
                 </li>
+
+
+
+
+
+
             </ul>
             <form class="navbar-form navbar-left" role="search">
                 <div class="form-group">

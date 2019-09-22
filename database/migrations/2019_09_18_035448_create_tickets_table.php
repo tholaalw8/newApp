@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 class CreateTicketsTable extends Migration
 {
@@ -21,6 +21,8 @@ class CreateTicketsTable extends Migration
             $table->integer('user_id');
             $table->timestamps();    
         });
+
+
     }
 
     /**

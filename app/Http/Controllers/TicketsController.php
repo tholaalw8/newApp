@@ -8,9 +8,17 @@ use App\Ticket;
 class TicketsController extends Controller
 {
 
+
+    public function show($slug){
+        $ticket = Ticket::whereSlug($slug)->firstOrFail();
+        return view('tickets.show',compact('ticket'));
+
+    }
+
+
     public function index(){
         $tickets = Ticket::all();
-        return view('ticket.index',compact('tickets'));
+        return view('tickets.index',compact('tickets'));
 
     }
 
@@ -36,6 +44,51 @@ class TicketsController extends Controller
       return redirect('/contact')->with('status','Your ticket has been created! Its unique id id '.$slug);
 
     }
+
+
+    public function edit($slug){
+
+        $ticket = Ticket::whereSlug($slug)->firstOrFail();
+        return view('tickets.edit',compact('ticket'));
+
+    }
+
+
+    public function update($slug, TicketFormRequest $request){
+
+        $ticket = Ticket::whereSlug($slug)->firstOrFail();
+        $ticket->title = $request->get('title');
+        $ticket->content = $request->get('content');
+
+
+        $ticket->save();
+       return redirect(action('TicketsController@edit',$ticket->slug))->with('status','The ticket '.$slug.' has been updated!');
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
