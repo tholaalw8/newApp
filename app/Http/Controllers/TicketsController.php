@@ -68,20 +68,11 @@ class TicketsController extends Controller
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ public function destroy($slug){
+    $ticket = Ticket::whereSlug($slug)->firstOrFail();
+    $ticket->delete();
+    return redirect('/ticket')->with('status','The ticket '.$slug.'has been deleted!');
+ }
 
 
 

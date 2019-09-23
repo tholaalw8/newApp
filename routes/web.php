@@ -18,7 +18,9 @@ Route::get('/','PagesController@home');
 Route::get('/ticket','TicketsController@index');
 Route::get('/contact','TicketsController@create');
 Route::get('/createMovie','MoviesController@create');
-Route::get('movieList','MoviesController@index');
+
+
+Route::get('/movie','MoviesController@index');
 
 Route::get('/ticket/{slug?}','TicketsController@show');
 Route::get('/movie/{slug?}','MoviesController@show');
@@ -32,7 +34,8 @@ Route::post('/contact','TicketsController@store');
 Route::post('/createMovie','MoviesController@store');
 Route::post('/ticket/{slug?}/edit','TicketsController@update');
 Route::post('/movie/{slug?}/edit','MoviesController@update');
-
+Route::post('/ticket/{slug?}/delete','TicketsController@destroy');
+Route::post('/movie/{slug?}/delete','MoviesController@destroy');
 
 
 

@@ -84,7 +84,13 @@ class MoviesController extends Controller
     }
 
 
+    public function destroy($slug){
+        $movie = Movie::whereSlug($slug)->firstOrFail();
+        $movie->delete();
 
+        return redirect('/movie')->with('status','The movie '.$slug.'has been deleted!');
+
+    }
 
 
 

@@ -41,7 +41,7 @@
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="/createMovie">Create</a></li>
                         <li class="divider"></li>
-                        <li><a href="/movieList">Movie List</a></li>
+                        <li><a href="/movie">Movie List</a></li>
                         <li class="divider"></li>
                         <li><a href="#">One more separated link</a></li>
                     </ul>

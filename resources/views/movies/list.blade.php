@@ -6,6 +6,13 @@
             <div class="panel-heading">
                 <h2> Movies </h2>
             </div>
+
+            @if (session('status'))
+                <div class="alert alert-success">
+                    {{ session('status')}}
+                </div>
+            @endif
+
             @if ($movies->isEmpty())
                 <p> There is no movie.</p>
             @else
