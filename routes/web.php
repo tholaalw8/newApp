@@ -37,26 +37,7 @@ Route::post('/movie/{slug?}/edit','MoviesController@update');
 Route::post('/ticket/{slug?}/delete','TicketsController@destroy');
 Route::post('/movie/{slug?}/delete','MoviesController@destroy');
 
-
-Route::get('/sendemail', function() {
-    $data = array(
-      'name' => "Larning Laravel",
-    );
-
-    Mail::send('emails.welcome',$data, function ($message){
-
-        $message->from('tholaalw8@gmail.com','Learning laravel');
-        $message->to('tholaalw8@gmail.com')->subject('Learning Laravel test email');
-
-    });
-
-    return "Your email has been sent successfully";
-
-});
-
-
-
-
+Route::post('/comment','CommentsController@newComment');
 
 
 
