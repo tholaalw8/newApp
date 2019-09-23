@@ -25,5 +25,16 @@
     </div>
 
 
+    <div class="well well bs-component">
+
+
+
+
+
+
+
+
+
+
 
 @endsection
