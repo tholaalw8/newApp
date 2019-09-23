@@ -2,7 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+
+use App\Http\Requests\CommentFormRequest;
+use App\Comment;
+use App\Http\Controllers\Controller;
+
+
+
+
 
 class CommentsController extends Controller
 {
@@ -12,7 +19,8 @@ class CommentsController extends Controller
 
         $comment = new Comment(array(
             'post_id' => $request->get('post_id'),
-            'content' => $request->get('content')
+            'content' => $request->get('content'),
+            'user_id' => "1",
         ));
         $comment->save();
         return redirect()->back()->with('status', 'Your comment has been created!');
