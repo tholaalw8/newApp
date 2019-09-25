@@ -15,7 +15,8 @@ class MoviesController extends Controller
 
     public function show($slug){
         $movies = Movie::whereSlug($slug)->firstOrFail();
-        return view('movies.show',compact('movies'));
+        $comments = $movies->comments()->get();
+        return view('movies.show',compact('movies','comments'));
 
     }
 

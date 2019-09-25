@@ -39,7 +39,7 @@ Route::post('/movie/{slug?}/delete','MoviesController@destroy');
 
 Route::post('/comment','CommentsController@newComment');
 
-
+   
 
 
 

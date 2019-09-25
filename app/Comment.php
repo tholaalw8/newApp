@@ -13,4 +13,9 @@ class Comment extends Model
         return $this->belongsTo('App\Ticket');
 
     }
+
+    public function movie(){
+
+        return $this->belongsTo('App\Movie');
+    }
 }
