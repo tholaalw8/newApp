@@ -40,6 +40,8 @@ Route::post('/movie/{slug?}/delete','MoviesController@destroy');
 Route::post('/comment','CommentsController@newComment');
 
    
+Route::get('users/register','Auth\AuthController@getRegister');
+Route::post('users/register','Auth\AuthController@postRegister');
 
 
 
@@ -53,3 +55,11 @@ Route::post('/comment','CommentsController@newComment');
 
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
