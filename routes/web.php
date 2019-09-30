@@ -16,39 +16,28 @@
 Route::get('/','PagesController@home');
 
 Route::get('/ticket','TicketsController@index');
-Route::get('/contact','TicketsController@create');
-Route::get('/createMovie','MoviesController@create');
+Route::get('/contact','TicketsController@create')->middleware('auth');;
+Route::get('/createMovie','MoviesController@create')->middleware('auth');;
 
 
 Route::get('/movie','MoviesController@index');
 
-Route::get('/ticket/{slug?}','TicketsController@show');
-Route::get('/movie/{slug?}','MoviesController@show');
+Route::get('/ticket/{slug?}','TicketsController@show')->middleware('auth');;
+Route::get('/movie/{slug?}','MoviesController@show')->middleware('auth');;
 
 
-Route::get('/ticket/{slug?}/edit','TicketsController@edit');
-Route::get('/movie/{slug?}/edit','MoviesController@edit');
+Route::get('/ticket/{slug?}/edit','TicketsController@edit')->middleware('auth');
+Route::get('/movie/{slug?}/edit','MoviesController@edit')->middleware('auth');
 
 
 Route::post('/contact','TicketsController@store');
 Route::post('/createMovie','MoviesController@store');
 Route::post('/ticket/{slug?}/edit','TicketsController@update');
 Route::post('/movie/{slug?}/edit','MoviesController@update');
-Route::post('/ticket/{slug?}/delete','TicketsController@destroy');
-Route::post('/movie/{slug?}/delete','MoviesController@destroy');
+Route::post('/ticket/{slug?}/delete','TicketsController@destroy')->middleware('auth');;
+Route::post('/movie/{slug?}/delete','MoviesController@destroy')->middleware('auth');;
 
-Route::post('/comment','CommentsController@newComment');
-
-   
-Route::get('users/register','Auth\AuthController@getRegister');
-Route::post('users/register','Auth\AuthController@postRegister');
-
-
-
-
-
-
-
+Route::post('/comment','CommentsController@newComment')->middleware('auth');;
 
 
 
