@@ -13,6 +13,22 @@
 
 
 
+
+
+Route::group(array('prefix' => 'admin','namespace' => 'Admin','middleware' => 'manager'), function(){
+    Route::get('users','UsersController@index');
+
+});
+
+
+
+
+
+
+
+
+
+
 Route::get('/','PagesController@home');
 
 Route::get('/ticket','TicketsController@index');

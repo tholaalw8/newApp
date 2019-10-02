@@ -49,7 +49,7 @@ class TicketsController extends Controller
             'ticket' => $slug,
         );
         Mail::send('emails.ticket', $data, function ($message) {
-            $message->from('tholaalw8@gmail.com', 'Learning Laravel');
+            $message->from('support@tholle.me', 'Learning Laravel');
             $message->to('tholaalw8@gmail.com')->subject('There is a new ticket!');
         });
 
